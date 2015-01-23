@@ -12,9 +12,9 @@ $off-white:				#fcfcfc;
 	font-family: 'icomoon';
 	src:font-url('icomoon.eot?-w850bq');
 	src:font-url('icomoon.eot?#iefix-w850bq') format('embedded-opentype'),
-		asset_url('assets/icomoon.woff?-w850bq') format('woff'),
-		asset_url('assets/icomoon.ttf?-w850bq') format('truetype'),
-		asset_url('assets/icomoon.svg?-w850bq#icomoon') format('svg');
+		asset-url('assets/icomoon.woff?-w850bq') format('woff'),
+		asset-url('assets/icomoon.ttf?-w850bq') format('truetype'),
+		asset-url('assets/icomoon.svg?-w850bq#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
