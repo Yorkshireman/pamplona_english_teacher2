@@ -2,11 +2,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$brand-colour: 			#FF2C28;
-$brand-colour-darker: 	#B71816;
-$brand-colour-lighter:	#FF403D;
+$brand-primary: 		#FF2C28;
+$brand-primary-darker: 	#B71816;
+$brand-primary-lighter:	#FF403D;
 $font-family-base: 		'News Cycle', sans-serif;
 $off-white:				#fcfcfc;
+$font-size-base:		16px;
 
 @font-face {
 	font-family: 'icomoon';
@@ -85,8 +86,20 @@ html {
 
 p {
 	font-family: $font-family-base;
+	font-size: $font-size-base;
 	&:first-child {
-		padding-top:1em;
+		padding-top: 0.5em;
+		a {
+			color: $brand-primary;
+			&:hover {
+				color: $brand-primary-darker;
+			}
+		}
+		span {
+			font-size: $font-size-base;
+			text-shadow: none;
+			text-decoration: underline;
+		}
 	}
 }
 
@@ -107,7 +120,7 @@ p {
 	margin: 0;
 	padding-top: 0.3em;
 	font-family: 'Lobster', cursive;
-	color: $brand-colour;
+	color: $brand-primary;
 	letter-spacing: -1px;
 }
 
@@ -116,10 +129,10 @@ p {
 /* body */
 
 .phone_number {
-	color: $brand-colour;
+	color: $brand-primary;
 	&:hover {
 		text-decoration: none;
-		color: $brand-colour;
+		color: $brand-primary;
 	}
 }
 
@@ -130,11 +143,11 @@ img {
 span {						// all icons
 		text-shadow: 5px 4px 5px $gray-light;
 		font-size: 10em;
-		color: $brand-colour;
+		color: $brand-primary;
 		transition-property: color;
 		transition-duration: 0.3s;
 		&:hover {
-			color: $brand-colour-lighter;
+			color: $brand-primary-lighter;
 			transition-duration: 0.5s;
 		}
 		&:active {
