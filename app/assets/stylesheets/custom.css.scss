@@ -128,6 +128,20 @@ p {
 
 /* body */
 
+.row {
+	.col-xs-6:first-child {
+		img {
+			max-width: 50%;
+		}
+	}
+	.col-xs-6:nth-child(2) {
+		img {
+			max-width: 75%;
+		}
+	}
+}
+
+
 .phone_number {
 	color: $brand-primary;
 	&:hover {
