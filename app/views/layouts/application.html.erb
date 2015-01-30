@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pamplona English Teacher | <%= yield(:title) %></title>
+  <title>Profesor de Inglés, Pamplona | Pamplona English Teacher | <%= yield(:title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,16 +9,8 @@
 </head>
 
 <body>
-	<div class="container main-wrapper">
-    <div class="container navbar-default navbar navbar-fixed-top">
-      <h1 id="logo">Pamplona English Teacher</h1>
-      <small>Andrew Stelmach</small>
-    </div>
 
-    <div class="content">
-      <%= yield %>
-    </div>
-  </div>
+  <%= yield %>
 
 </body>
 
