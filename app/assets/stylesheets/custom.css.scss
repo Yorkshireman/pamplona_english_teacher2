@@ -150,6 +150,15 @@ a {
 	}
 }
 
+/* Icon Row */
+.icon-row {
+	text-align: center;
+	font-size: 9.5em;
+	a {
+		text-decoration: none;
+	}
+}
+
 
 
 /* footer */
@@ -159,15 +168,20 @@ a {
 	padding-bottom: 1em;
 }
 
+
+/* Additional Media Queries */
 @media only screen and (max-width: 767px) {
 	.homepage-wrapper > .container {
 		width: 96%;
 	}	
 }
 
-// @media only screen and (max-width: 649px) {
-// 	.homepage-wrapper > .container {
-// 		background-color: coral;
-// 	}
-	
-// }
+.contact-details {display:none;}
+@media only screen and (min-width: 649px) {
+	.icon-row {
+		display: none;
+	}
+	.contact-details {
+		display: block;
+	}
+}
