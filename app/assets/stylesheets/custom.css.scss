@@ -132,6 +132,20 @@ a {
 	.image-row {
 		padding-top: 2em;
 	}
+
+	/* content row */
+	.content-row {
+		.icon-facebook, .icon-email {
+			margin-right: 5px;
+			position: relative;
+			top: 0.24em;
+			font-size: 2em;
+		}
+
+		.facebook-icon, .email-icon {			// The anchor element part
+			text-decoration: none;
+		}
+	}
 }
 
 
