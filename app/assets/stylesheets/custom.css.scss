@@ -116,6 +116,8 @@ a {
 
 .homepage-wrapper > .container {
 	max-width: 768px;
+	padding-left: 2%;
+	padding-right: 2%;
 	
 	/* logo */
 	img:first-child {
@@ -156,3 +158,16 @@ a {
 	padding-top: 1em;
 	padding-bottom: 1em;
 }
+
+@media only screen and (max-width: 767px) {
+	.homepage-wrapper > .container {
+		width: 96%;
+	}	
+}
+
+// @media only screen and (max-width: 649px) {
+// 	.homepage-wrapper > .container {
+// 		background-color: coral;
+// 	}
+	
+// }
