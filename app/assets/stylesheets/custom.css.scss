@@ -80,6 +80,7 @@ a {
 	max-width: 768px;
 	padding-left: 3%;
 	padding-right: 3%;
+	padding-bottom: 1em;
 	margin: auto;
 	
 	/* logo */
@@ -124,6 +125,13 @@ a {
 
 	/* contact details on bigger screens */
 	.contact-details {
+		margin-bottom: 4em;
+		span {
+			font-size: 2em;
+			position: relative;
+			top: 7px;
+			margin-right: 5px;
+		}
 		a:first-child {							// only the icon anchor elements, not the writing
 			text-decoration: none;
 		}
@@ -163,6 +171,8 @@ a {
 	display: inline-block;
 		&:first-child {
 			float: left;
+			position: relative;
+			top: 3px;
 		}
 		&:nth-child(2) {
 			margin-left: 2%;
