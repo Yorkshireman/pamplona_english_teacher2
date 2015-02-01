@@ -70,10 +70,14 @@ a {
 }
 
 
-
 /* specifics */
 .homepage-wrapper {
 	background: linear-gradient(#de3030, #cb1717);
+}
+
+#whatsapp-p-element {
+		text-align: center;
+		font-weight: bold;
 }
 
 .homepage-wrapper > .container {
@@ -156,11 +160,11 @@ a {
 
 	a:first-child {						// email icon anchor element
 		margin: auto;
-		margin-right: 6%;
+		margin-right: 4%;
 	}
 	a:last-child {						// facebook icon anchor element
 		margin: auto;
-		margin-left: 6%;
+		margin-left: 4%;
 	}
 }
 
@@ -207,9 +211,14 @@ a {
 
 .contact-details {display:none;}
 @media only screen and (min-width: 649px) {
+	#whatsapp-p-element {
+		text-align: left;
+	}
+
 	.icon-row {
 		display: none;
 	}
+
 	.contact-details {
 		display: block;
 	}
