@@ -64,8 +64,11 @@ img {
 a {
 	color: $text-colour;
 	text-decoration: underline;
+	transition-property: color;
+	transition-duration: 0.2s;
 	&:hover {
 		color: #CCCCCC;
+		transition-duration: 0.5s;
 	}
 }
 
@@ -146,6 +149,8 @@ a {
 
 /* Icon Row */
 .icon-row {
+	position: relative;
+	bottom: 25px;
 	text-align: center;
 	font-size: 7.5em;
 	a {
@@ -154,8 +159,6 @@ a {
 
 	.icon-email, .icon-facebook { 		// the span elements
 		display: inline-block;
-		position: relative;
-		bottom: 25px;
 	}
 
 	a:first-child {						// email icon anchor element
