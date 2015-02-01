@@ -40,7 +40,7 @@ p, h1, h2, h3, h4, a {
 
 /* paragraph text */
 p {
-margin-bottom: 1em;
+	margin-bottom: 1.5em;
 }
 p:last-child {
 	margin-bottom: 0;
@@ -117,16 +117,8 @@ a {
 	/* main writing */
 	.content-row {
 		margin-top: 1em;
-
-		.icon-facebook, .icon-email {
-			margin-right: 5px;
-			position: relative;
-			top: 0.24em;
-			font-size: 2em;
-		}
-
-		.facebook-icon, .email-icon {			// The anchor element part
-			text-decoration: none;
+		p {
+			margin-top: 0;
 		}
 	}
 
