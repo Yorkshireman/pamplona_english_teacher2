@@ -148,14 +148,19 @@ a {
 		text-decoration: none;
 	}
 
-	.icon-email, .icon-facebook {
+	.icon-email, .icon-facebook { 		// the span elements
 		display: inline-block;
-		width: 50px;
-		margin-right: 12.5%;
-		margin-left: 12.5%;
 		position: relative;
-		right: 50px;
 		bottom: 25px;
+	}
+
+	a:first-child {						// email icon anchor element
+		margin: auto;
+		margin-right: 6%;
+	}
+	a:last-child {						// facebook icon anchor element
+		margin: auto;
+		margin-left: 6%;
 	}
 }
 
