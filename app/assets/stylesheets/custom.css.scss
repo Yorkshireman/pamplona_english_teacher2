@@ -74,54 +74,65 @@ a {
 
 
 /* specifics */
+header {
+	max-width: 475px;
+	padding-top: 2.5em;
+	margin-bottom: 6em;
+}
+
 .homepage-wrapper {
 	background: linear-gradient(#de3030, #cb1717);
 }
 
-#whatsapp-p-element {
-		text-align: center;
-		font-weight: bold;
-}
 
+/* Homepage Styling */
 .homepage-wrapper > .container {
 	max-width: 768px;
-	padding-left: 3%;
-	padding-right: 3%;
+	padding-left: 3.5%;
+	padding-right: 3.5%;
 	padding-bottom: 1em;
 	margin: auto;
-	
+
+	.contact-details {					// replaces the bottom icons on bigger screens
+		display:none
+	}
+
 	/* logo */
 	#logo {
-		width: 100%;
-		padding-top: 2em;
-		padding-bottom: 2em;
+		width: 100%;					// to maintain svg aspect ratio across browsers	
 	}
 
 	/* headline div */
-	#headline {
-		padding-top: 1.5em;
-		padding-bottom: 4em;
+	#headline-div {
+		padding: 1em 0 2.5em 0;
+		h3 {
+			font-size: 1.3em;
+			font-weight: normal;
+		}
 	}
 	
 	/* image row div */
 	.image-row {
+		margin-top: 2em;
 		img {
 			margin-top: 1em;
 			border-radius: 5px;
 		}
 
 		img:nth-child(2) {
-			margin-top: 0.5em;
+			margin-top: 1em;
 		}
 	}
 
 	/* main writing */
 	.content-row {
-		margin-top: 1em;
+		margin-top: 2em;
 		p {
 			margin-top: 0;
 		}
 	}
+
+
 
 	/* contact details on bigger screens */
 	.contact-details {
@@ -132,13 +143,18 @@ a {
 			top: 7px;
 			margin-right: 5px;
 		}
-		a:first-child {							// only the icon anchor elements, not the writing
+		a:first-child {						// only the icon anchor elements, not the writing
 			text-decoration: none;
 		}
 	}
-
-
 }
+
+#whatsapp-p-element {
+		text-align: center;
+		font-weight: bold;
+}
+
+
 
 /* Icon Row */
 .icon-row {
@@ -181,65 +197,6 @@ a {
 		}
 		&:last-child {
 			margin-left: 2%;
-		}
-	}
-}
-
-
-/* Media Queries */
-@media only screen and (max-width: 767px) {
-	.homepage-wrapper > .container {
-	h3 {
-		font-size: 1.6em;
-	}
-	
-	/* headline div */
-	#headline-div {
-		padding-top: 1.5em;
-		padding-bottom: 2em;
-	}
-
-	}	
-}
-
-.contact-details {display:none;}
-@media only screen and (min-width: 649px) {
-	#whatsapp-p-element {
-		text-align: left;
-	}
-
-	.icon-row {
-		display: none;
-	}
-
-	.contact-details {
-		display: block;
-	}
-
-	.image-row {
-		text-align: center;
-		img {
-			display: inline-block;
-			width: 48%;
-			margin: 0 0.5% 0 1%;
-		}
-	}
-
-	.content-row {
-		margin-bottom: 4em;
-
-		br {
-			display: none;
-		}
-
-		#contact-div, #about-div {
-			display: inline-block;
-			width: 48%;
-			vertical-align: top;
-		}
-
-		#contact-div {
-			margin-left: 3%;
 		}
 	}
 }

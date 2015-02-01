@@ -13,4 +13,5 @@
  *= require normalize.css.scss
  *= require icomoon.css.scss
  *= require_tree .
+ *= require mediaqueries.css.scss
  */
