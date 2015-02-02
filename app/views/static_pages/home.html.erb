@@ -4,15 +4,13 @@
 	
 	<div class="container">
   	
-  	<%= render('layouts/header') %>
-
-  	<hr>
-
+  	<div id="header-wrapper">
+  		<%= render('layouts/header') %>
+  	</div>
+  
   	<div id="headline-div">
   		<h3>Aprende inglés con un profesor nativo de inglaterra, titulado de inglés (<span title="¿Que es el CELTA?"><a href="http://www.cambridgeenglish.org/es/exams-and-qualifications/celta/">CELTA</a></span>) y con experiencia. Residente en Pamplona desde septiembre 2014</h3>
   	</div>
-  
-  	<hr>
 
   	<div class="image-row">
   		<%= image_tag "S2.jpg" %>
@@ -44,8 +42,6 @@
 		</div>
 
 		<%= render ('layouts/icon_row') %>
-
-		<hr>
 
 		<%= render ('layouts/footer') %>
 

@@ -7,7 +7,7 @@ $brand-primary-darker: 	#B71816;
 $brand-primary-lighter:	#FF403D;
 $off-white:				#fcfcfc;
 $text-colour:			white;
-$main-font-set:			Arial, sans-serif; 
+$main-font-set:			Arial, sans-serif;
 
 /*Gradient: top #de3030,  to bottom #cb1717
 
@@ -74,10 +74,13 @@ a {
 
 
 /* specifics */
-header {
-	max-width: 475px;
-	padding-top: 2.5em;
-	margin-bottom: 6em;
+#header-wrapper {
+	border-bottom: 1px solid $text-colour;
+	header {
+		max-width: 475px;
+		padding-top: 2.5em;
+		margin-bottom: 6em;
+	}
 }
 
 .homepage-wrapper {
@@ -104,7 +107,8 @@ header {
 
 	/* headline div */
 	#headline-div {
-		padding: 1em 0 2.5em 0;
+		padding: 1.5em 0 3em 0;
+		border-bottom: 1px solid $text-colour;
 		h3 {
 			font-size: 1.3em;
 			font-weight: normal;
@@ -180,7 +184,9 @@ header {
 
 
 /* footer */
-.footer { 
+.footer {
+	border-top: 1px solid $text-colour;
+	padding-top: 0.5em;
 	text-align: right;
 	p {
 	padding: 0;
