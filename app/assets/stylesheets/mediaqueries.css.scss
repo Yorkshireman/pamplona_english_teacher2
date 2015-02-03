@@ -24,11 +24,16 @@
 		}
 
 		.image-row {
-			text-align: center;
 			img {
 				display: inline-block;
-				width: 48%;
-				margin: 0 0.5% 0 1%;
+				width: 49%;
+				margin: 0%;
+				&:first-child {
+					margin-right: 1%;
+				}
+				&:nth-child(2) {
+					margin-left: 1%;
+				}
 			}
 		}
 
@@ -46,7 +51,7 @@
 			}
 
 			#contact-div {
-				margin-left: 3%;
+				margin-left: 2.5%;
 			}
 		}
 	}
