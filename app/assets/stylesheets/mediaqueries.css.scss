@@ -1,6 +1,12 @@
 /* Homepage Media Queries (inner-container) */
-.homepage-wrapper > .container {
+.main-wrapper > .container {
 	
+	@media only screen and (min-width: 346px) {
+		.footer {
+			bottom: 0.6em;
+		}
+	}
+
 	@media only screen and (min-width: 435px) {
 		#headline-div {
 			h3 {

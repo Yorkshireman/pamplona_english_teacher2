@@ -23,13 +23,15 @@ body: 16px, 28px line-height*/
 /* global */
 html {
 	overflow-y: scroll;
+	height: 100%;		// footer fix for small screens
 }
 
 body {
 	font-size: 100%;
+	height: 100%;		// footer fix for small screens
 }
 
-p, h1, h2, h3, h4, a {
+p, h1, h2, h3, h4, a, th {
 	color: $text-colour;
 	font-family: $main-font-set;
 	line-height: 1.8em;
@@ -80,19 +82,27 @@ a {
 	}
 }
 
-.homepage-wrapper {
+.main-wrapper {
 	// background: linear-gradient(#de3030, #cb1717);
 	background: linear-gradient(#990000, #CC0000);
+	padding-top: 1px;		// top gap fix for reviews view
+	min-height: 100%;		// footer fix for small screens
+	padding-bottom: 1px;	// stops bottom collapse
+	position: relative;		// footer fix for small screens
 }
 
 
+
+
 /* Homepage Styling */
-.homepage-wrapper > .container {
+.main-wrapper > .container {
 	max-width: 768px;
 	padding-left: 3.5%;
 	padding-right: 3.5%;
-	padding-bottom: 1em;
+	padding-bottom: 1em;	// use this to control gap above footer
 	margin: auto;
+	height: 100%;
+
 
 	.contact-details {					// replaces the bottom icons on bigger screens
 		display:none
@@ -183,8 +193,13 @@ a {
 
 /* footer */
 .footer {
+	position: absolute;
+	width: 90%;
+	max-width: 768px;
+	bottom: 1em;
+	margin: auto;
 	border-top: 1px solid $text-colour;
-	padding-top: 0.5em;
+	padding-top: 0.5em;					
 	text-align: right;
 	p {
 	padding: 0;
@@ -194,7 +209,7 @@ a {
 		&:first-child {
 			float: left;
 			position: relative;
-			top: 3px;
+			top: 2px;
 		}
 		&:nth-child(2) {
 			margin-left: 2%;
