@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :reviews
+  resources :testimonials
 
   root  'static_pages#home'
 
