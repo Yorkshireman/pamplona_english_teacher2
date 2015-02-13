@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150213154706) do
+ActiveRecord::Schema.define(version: 20150213165722) do
 
   create_table "reviews", force: :cascade do |t|
     t.string   "testimonials"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150213154706) do
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
