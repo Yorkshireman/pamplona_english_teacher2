@@ -1,5 +1,6 @@
 class TestimonialsController < ApplicationController
   before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
+  # before_action :require_login, only: [:new]
 
   def index
     @testimonials = Testimonial.all
@@ -10,6 +11,9 @@ class TestimonialsController < ApplicationController
 
   def new
     @testimonial = Testimonial.new
+    if !logged_in?
+      redirect_to('/users/new')
+    end
   end
 
   def edit
