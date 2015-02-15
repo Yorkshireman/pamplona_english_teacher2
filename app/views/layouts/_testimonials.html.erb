@@ -1,25 +1,17 @@
 <div id="testimonials-wrapper">
-	
+
 	<h4>Opiniones</h4>
-	<% @testimonials.each do |testimonial| %>
-	<h5>Username</h5>
-	<p><%= testimonial.testimonial %></p>
-	<%= link_to 'Mostrar', testimonial %>
-	<%= link_to 'Editar', edit_testimonial_path(testimonial) %>
-	<%= link_to 'Borrar', method: :delete, data: { confirm: '¿Está seguro?'} %>
 
-	<% end %>
+    <% @testimonials.each do |testimonial| %>
+      <h5><%= testimonial.user.name %></h5>
+      <p><%= testimonial.content %></p>
+      <%= link_to 'Mostrar', testimonial %>
+      <%= link_to 'Editar', edit_testimonial_path(testimonial) %>
+      <%= link_to 'Borrar', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
 
-	   <!--  <% @testimonials.each do |testimonial| %>
-	      <tr>
-	        <td><%= testimonial.testimonial %></td>
-	        <td><%= link_to 'Show', testimonial %></td>
-	        <td><%= link_to 'Edit', edit_testimonial_path(testimonial) %></td>
-	        <td><%= link_to 'Destroy', testimonial, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
-	      </tr>
-	    <% end %>
-	  </tbody>
-	</table> -->
 	<br>
-	<%= link_to 'Deja tu opinión', new_testimonial_path %>
+
+	<div><%= link_to 'Deja tu opinión', new_testimonial_path %></div>
+
 </div>
