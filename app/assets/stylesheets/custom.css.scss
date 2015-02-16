@@ -53,9 +53,9 @@ p, h1, h2, h3, h4, h5, a, th, td {
 .btn {
 	display:inline-block;
   color: $text-colour;
-  padding: 5px 15px;
-  border: solid $text-colour 2.5px;
-  font-size: 14px;
+  padding: 0.357142857em 1.071428571em;
+  border: solid $text-colour 0.178571429em;
+  font-size: 0.875em;
   // letter-spacing: 1px;
   font-family: Montserrat, sans-serif;
   text-transform: uppercase;
@@ -126,8 +126,8 @@ a {
 						bottom: 0.2em;
 						right: 0;
 						.btn {
-							font-size: 12px;
-							padding: 3px 13px;
+							font-size: 0.75em;
+							padding: 0.25em 1.083333333em;
 							&:hover {
 								color: $brand-primary;
 							}
