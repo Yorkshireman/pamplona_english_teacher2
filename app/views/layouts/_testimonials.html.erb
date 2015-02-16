@@ -5,13 +5,15 @@
     <% @testimonials.each do |testimonial| %>
       <h5><%= testimonial.user.name %></h5>
       <p><%= testimonial.content %></p>
-      <%= link_to 'Mostrar', testimonial %>
-      <%= link_to 'Editar', edit_testimonial_path(testimonial) %>
-      <%= link_to 'Borrar', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <!--<%= link_to 'Mostrar', testimonial %>-->
+      
+      <% if testimonial.user == current_user %>
+        <%= link_to 'Editar', edit_testimonial_path(testimonial) %>
+        <%= link_to 'Borrar', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+
     <% end %>
 
 	<br>
-
-	<div><%= link_to 'Deja tu opinión', new_testimonial_path %></div>
 
 </div>

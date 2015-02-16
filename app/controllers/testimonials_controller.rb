@@ -1,6 +1,6 @@
 class TestimonialsController < ApplicationController
   before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
-  # before_action :require_login, only: [:new]
+  before_action :require_login, except: [:index, :show]
 
   def index
     @testimonials = Testimonial.all
@@ -11,9 +11,6 @@ class TestimonialsController < ApplicationController
 
   def new
     @testimonial = Testimonial.new
-    if !logged_in?
-      redirect_to('/users/new')
-    end
   end
 
   def edit
@@ -22,31 +19,23 @@ class TestimonialsController < ApplicationController
   def create
     @testimonial = current_user.testimonials.build(testimonial_params)
     if @testimonial.save
-      flash[:success] = "Testimonial created!"
-      redirect_to root_url
+      redirect_to root_url, notice:'Testimonial created! Thankyou!'
     else
       render 'static_pages/home'
     end
   end
 
   def update
-    respond_to do |format|
-      if @testimonial.update(testimonial_params)
-        format.html { redirect_to @testimonial, notice: 'Testimonial was successfully updated.' }
-        format.json { render :show, status: :ok, location: @testimonial }
-      else
-        format.html { render :edit }
-        format.json { render json: @testimonial.errors, status: :unprocessable_entity }
-      end
+    if @testimonial.update(testimonial_params)
+      redirect_to @testimonial, notice: 'Testimonial was successfully updated.'
+    else
+      render :edit
     end
   end
 
   def destroy
     @testimonial.destroy
-    respond_to do |format|
-      format.html { redirect_to testimonials_url, notice: 'Testimonial was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to root_url, notice: 'Testimonial was successfully deleted.'
   end
 
   private

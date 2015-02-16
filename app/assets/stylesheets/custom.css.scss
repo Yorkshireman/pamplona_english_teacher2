@@ -80,12 +80,18 @@ a {
 
 /* specifics */
 #header-wrapper {
+	position: relative;
 	border-bottom: 1px solid $text-colour;
-	header {
-		max-width: 475px;
-		padding-top: 2.5em;
-		margin-bottom: 6em;
-	}
+		header {
+			max-width: 475px;
+			padding-top: 2.5em;
+			margin-bottom: 6em;
+				#login-div {
+						position: absolute;
+						bottom: 0;
+						right: 0;
+				}
+		}
 }
 
 .main-wrapper {
