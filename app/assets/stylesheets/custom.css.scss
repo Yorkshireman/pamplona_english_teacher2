@@ -1,10 +1,21 @@
+/* Font Imports */
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
 /* Sass variable declarations */
-$brand-primary: 		#FF2C28;
-$brand-primary-darker: 	#B71816;
-$brand-primary-lighter:	#FF403D;
-$off-white:				#fcfcfc;
-$text-colour:			white;
-$main-font-set:			Arial, sans-serif;
+
+/* Richard's original colour */
+// $brand-primary: 		#FF2C28;
+
+/* Colours I derived from Richard's original colours */
+// $brand-primary-darker: 	#B71816;
+// $brand-primary-lighter:	#FF403D;
+
+$brand-primary:					#990000;
+$brand-primary-lighter: #CC0000;
+$off-white:							#fcfcfc;
+$text-colour:						$off-white;
+$main-font-set:					Arial, sans-serif;
 
 /*Gradient: top #de3030,  to bottom #cb1717
 
@@ -36,6 +47,30 @@ p, h1, h2, h3, h4, h5, a, th, td {
 	font-family: $main-font-set;
 	line-height: 1.8em;
 }
+
+
+/* Buttons */
+.btn {
+	display:inline-block;
+  color: $text-colour;
+  padding: 5px 15px;
+  border: solid $text-colour 2.5px;
+  font-size: 14px;
+  // letter-spacing: 1px;
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition-property: background, color;
+  transition-duration: 0.1s;
+}
+
+.btn:hover {
+	transition-duration: 0.15s;
+  background: $text-colour;
+  color: 			$brand-primary-lighter;
+  text-decoration: none;
+}
+
 
 /* paragraph text */
 p {
@@ -96,7 +131,7 @@ a {
 
 .main-wrapper {
 	// background: linear-gradient(#de3030, #cb1717);
-	background: linear-gradient(#990000, #CC0000);
+	background: linear-gradient($brand-primary, $brand-primary-lighter);
 	padding-top: 1px;		// top gap fix for reviews view
 	min-height: 100%;		// footer fix for small screens
 	padding-bottom: 1px;	// stops bottom collapse

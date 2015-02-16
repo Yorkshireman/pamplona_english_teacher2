@@ -4,10 +4,10 @@
 	<div id="login-div">
       <% if current_user %>
         <!-- <%= link_to "Edit Profile", edit_user_path(current_user.id) %> -->
-        <%= link_to "Logout", :logout, method: :post %>
+        <%= link_to "Salir", :logout, method: :post %>
       <% else %>
-        <p><%= link_to "Sign Up", new_user_path %> |
-        <%= link_to "Login", :login %></p>
+        <p><%= link_to "Registrate", new_user_path %> |
+        <%= link_to "Entrar", :login %></p>
       <% end %>
     </div>
 
