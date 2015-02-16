@@ -6,8 +6,8 @@
         <!-- <%= link_to "Edit Profile", edit_user_path(current_user.id) %> -->
         <%= link_to "Salir", :logout, method: :post %>
       <% else %>
-        <p><%= link_to "Registrate", new_user_path %> |
-        <%= link_to "Entrar", :login %></p>
+        <%= link_to "Registrarte", new_user_path, class:"btn" %>
+        <%= link_to "Entrar", :login, class:"btn" %>
       <% end %>
     </div>
 

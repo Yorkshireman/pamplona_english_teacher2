@@ -123,8 +123,15 @@ a {
 			margin-bottom: 6em;
 				#login-div {
 						position: absolute;
-						bottom: 0;
+						bottom: 0.2em;
 						right: 0;
+						.btn {
+							font-size: 12px;
+							padding: 3px 13px;
+							&:hover {
+								color: $brand-primary;
+							}
+						}
 				}
 		}
 }
