@@ -8,8 +8,8 @@
       <!--<%= link_to 'Mostrar', testimonial %>-->
       
       <% if testimonial.user == current_user %>
-        <%= link_to 'Editar', edit_testimonial_path(testimonial) %>
-        <%= link_to 'Borrar', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Editar', edit_testimonial_path(testimonial), class:"btn btn-small" %>
+        <%= link_to 'Borrar', testimonial, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-small" %>
       <% end %>
 
     <% end %>
