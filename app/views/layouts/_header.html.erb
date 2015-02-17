@@ -8,7 +8,8 @@
         <%end%>
       <% else %>
         <%= link_to "Registrarte", new_user_path, class:"btn btn-small" %>
-        <%= link_to "Entrar", :login, class:"btn btn-small" %>
+        <%= link_to :login, class:"btn btn-small" do%>Entrar<%= content_tag(:span, "", class:"icon-login") %>
+        <%end%>
       <% end %>
     </div>
 
