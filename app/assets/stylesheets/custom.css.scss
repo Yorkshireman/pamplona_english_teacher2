@@ -152,6 +152,14 @@ a {
 						position:		absolute;
 						bottom: 		0.2em;
 						right: 			0;
+						.icon-logout {
+							&:before {
+								position: relative;
+								top: 0.166666667em;
+								left: 5px;
+								font-size: 1.1em;
+							}
+						}
 				}
 		}
 }

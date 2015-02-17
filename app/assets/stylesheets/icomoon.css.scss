@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:font-url('icomoon.eot?-vya2i7');
-	src:font-url('icomoon.eot?#iefix-vya2i7') format('embedded-opentype'),
-		font-url('icomoon.woff?-vya2i7') format('woff'),
-		font-url('icomoon.ttf?-vya2i7') format('truetype'),
-		font-url('icomoon.svg?-vya2i7#icomoon') format('svg');
+	src:font-url('icomoon.eot?-2sqx2v');
+	src:font-url('icomoon.eot?#iefix-2sqx2v') format('embedded-opentype'),
+		font-url('icomoon.woff?-2sqx2v') format('woff'),
+		font-url('icomoon.ttf?-2sqx2v') format('truetype'),
+		font-url('icomoon.svg?-2sqx2v#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -27,6 +27,10 @@
 	content: "\e905";
 }
 
+.icon-user:before {
+	content: "\e971";
+}
+
 .icon-quotes-left:before {
 	content: "\e977";
 }
@@ -37,6 +41,14 @@
 
 .icon-delete:before {
 	content: "\e9ac";
+}
+
+.icon-login:before {
+	content: "\ea13";
+}
+
+.icon-logout:before {
+	content: "\ea14";
 }
 
 .icon-email:before {
