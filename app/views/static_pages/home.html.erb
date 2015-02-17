@@ -24,13 +24,11 @@
 		<p>También realizo la preparación específica para <span title="Exámenes de Cambridge"><a href="http://www.cambridgeenglish.org/es/exams-and-qualifications/">exámenes de Cambridge</a></span> o de Escuelas Oficiales. Prácticamente todas mis lecciones las he realizado con adultos.</p>
 	</div>
 
-	<br>
-
   	<% if @testimonials.count>0 %>
   		<%= render ('layouts/testimonials') %>
   	<% end %>
 
-  	<div><%= link_to 'Deja tu opinión', new_testimonial_path, class:"btn" %></div>
+  	<div class="testimonial-button-wrapper"><%= link_to 'Deja tu opinión', new_testimonial_path, class:"btn" %></div>
 
     <div id="contact-div">
 		<h4>Contacto</h4>	
