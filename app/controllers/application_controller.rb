@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
 
   private
-  def require_login
+  def require_login_for_new_testimonial
   	if !logged_in?
   		redirect_to('/user_sessions/new')
   		flash[:notice] = "Necesitas entrar o salir antes de continuar"
