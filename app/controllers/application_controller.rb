@@ -6,10 +6,15 @@ class ApplicationController < ActionController::Base
 
   private
   def require_login_for_new_testimonial
-  	if !logged_in?
-  		redirect_to('/user_sessions/new')
-  		flash[:notice] = "Necesitas entrar o salir antes de continuar"
-  	end
+    if !logged_in?
+      redirect_to('/user_sessions/new')
+      flash[:notice] = "Necesitas entrar o salir antes de continuar"
+    end
+  end
+
+  private
+  def not_authenticated
+    redirect_to new_user_session_path, :alert => "First log in to view this page."
   end
 
 end
