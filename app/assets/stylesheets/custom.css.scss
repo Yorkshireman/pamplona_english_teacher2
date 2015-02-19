@@ -41,6 +41,7 @@ $brand-primary-lighter-complementary-green-dark: #007F24;
 
 $off-white: #fcfcfc;
 $text-colour: white;
+$dark-grey: #191919;
 $main-font-set:	Arial, sans-serif;
 
 
@@ -339,9 +340,15 @@ a {
 				font-size: 1.5em;
 			}
 
-			p {
-				margin: 0;
-				margin-top: 0;
+			.testimonial-content {
+				background-color: $off-white;
+				padding: 0.2em 3%;
+				border-radius: 8px;
+				p {								// testimonial content
+					margin: 0;
+					margin-top: 0;
+					color: $dark-grey;
+				}
 			}
 
 			h5 {
