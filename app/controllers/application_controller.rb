@@ -5,11 +5,9 @@ class ApplicationController < ActionController::Base
 
 
   private
-  def require_login
-  	if !logged_in?
-  		redirect_to('/user_sessions/new')
-  		flash[:notice] = "Necesitas entrar o salir antes de continuar"
-  	end
+
+  def not_authenticated
+    redirect_to new_user_session_path, notice: "Necesitas entrar antes de continuar"
   end
 
 end
