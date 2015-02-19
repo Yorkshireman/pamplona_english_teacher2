@@ -32,7 +32,13 @@ body: 16px, 28px line-height*/
 *******************************************************************/
 
 $brand-primary:	#990000;
+$brand-primary-complementary-green-light: #00992B;
+$brand-primary-complementary-green-dark: #004C16;
+
 $brand-primary-lighter: #CC0000;
+$brand-primary-lighter-complementary-green-light: #00CC3A;
+$brand-primary-lighter-complementary-green-dark: #007F24;
+
 $off-white: #fcfcfc;
 $text-colour: white;
 $main-font-set:	Arial, sans-serif;
@@ -43,7 +49,7 @@ $main-font-set:	Arial, sans-serif;
 
 /******************************************************************
 		
-											GLOBAL STYLING
+						GLOBAL STYLING
 
 *******************************************************************/
 
@@ -315,18 +321,22 @@ a {
 	#testimonials-wrapper {
 		margin-top: 1em;
 		margin-bottom: 1.5em;
+		// background-color: $brand-primary-complementary-green-dark;
+		// background-color: #151E1E;
+		// background-color: #231B1E;
+		// background-color: #1F1F1F;
 			
 			.icon-quotes-left {
-				margin-right: 1%;
+				margin-right: 2%;
 				position: relative;
-				top: 0.075em;
-				font-size: 2em;
+				top: 0.085em;
+				font-size: 1.5em;
 			}
 			.icon-quotes-right {
-				margin-left: 1%;
+				margin-left: 2%;
 				position: relative;
 				top: 0.275em;
-				font-size: 2em;
+				font-size: 1.5em;
 			}
 
 			p {
@@ -336,10 +346,11 @@ a {
 
 			h5 {
 				margin-top: 1em;
-				span:before {
+				span:before {		// Student Icon
 					position: relative;
-					margin-right: 0.5%;
-					font-size: 0.833333333em;
+					top: 0.1875em;
+					margin-right: 2%;
+					font-size: 1.1em;
 				}
 			}
 

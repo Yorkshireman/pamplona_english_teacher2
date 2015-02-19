@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:font-url('icomoon.eot?-2sqx2v');
-	src:font-url('icomoon.eot?#iefix-2sqx2v') format('embedded-opentype'),
-		font-url('icomoon.woff?-2sqx2v') format('woff'),
-		font-url('icomoon.ttf?-2sqx2v') format('truetype'),
-		font-url('icomoon.svg?-2sqx2v#icomoon') format('svg');
+	src:font-url('icomoon.eot?g70dwh');
+	src:font-url('icomoon.eot?#iefixg70dwh') format('embedded-opentype'),
+		font-url('icomoon.woff?g70dwh') format('woff'),
+		font-url('icomoon.ttf?g70dwh') format('truetype'),
+		font-url('icomoon.svg?g70dwh#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -57,4 +57,8 @@
 
 .icon-facebook:before {
 	content: "\ea8e";
+}
+
+.icon-student:before {
+	content: "\e600";
 }
