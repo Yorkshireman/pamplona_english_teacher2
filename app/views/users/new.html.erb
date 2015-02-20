@@ -1,5 +1,15 @@
-<h1>Nuevo Usuario</h1>
+<% provide(:title, "Registrarte") %>
 
-<%= render 'form' %>
+<div id="new-user-wrapper">
+	<div class="header-wrapper">
+		<%= render('layouts/header') %>
+	</div>
 
-<%= link_to 'Atrás', users_path, class:"btn-small" %>
+	<h1>Nuevo Usuario</h1>
+
+	<%= render 'form' %>
+
+	<%= link_to 'Atrás', root_path, class:"btn-small" %>
+
+	<%= render ('layouts/footer') %>
+</div>

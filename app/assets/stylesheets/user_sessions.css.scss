@@ -1,0 +1,38 @@
+$off-white:	#fcfcfc;
+
+#new-session-wrapper {
+
+		#login-div {
+			display: none;
+		}
+		
+		.header-wrapper {
+			border-bottom:	none;
+				header {
+					padding-top: 	0;
+					margin-bottom:	4em;
+				}
+		}
+
+		h1 {
+			font-size: 		1.5em;
+			margin-bottom: 	0.3em;
+		}
+
+		.field {
+			color: white;
+			margin-bottom: 0.7em;
+			input {
+				margin-top: 0.06em;
+			}
+		}
+
+		.field:nth-child(6) {
+			margin-bottom:	0.9em;
+		}
+
+		input[type=submit] {
+			margin-bottom: 	0.6em;
+		}
+}
+

@@ -1,7 +1,16 @@
+<% provide(:title, "Entrar") %>
+
+<div id="new-session-wrapper">
+	<div class="header-wrapper">
+		<%= render('layouts/header') %>
+	</div>
+
 <h1>Entrar</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Registrarte', new_user_path %>
+<%= link_to 'Atrás', root_path, class:"btn-small" %>
 
-<%= link_to 'Atrás', root_path %>
+<%= render ('layouts/footer') %>
+
+</div>
