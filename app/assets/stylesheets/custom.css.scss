@@ -1,10 +1,9 @@
-/* Sass variable declarations */
-$brand-primary: 		#FF2C28;
-$brand-primary-darker: 	#B71816;
-$brand-primary-lighter:	#FF403D;
-$off-white:				#fcfcfc;
-$text-colour:			white;
-$main-font-set:			Arial, sans-serif;
+/* Richard's original colour */
+// $brand-primary: 		#FF2C28;
+
+/* Colours I derived from Richard's original colours */
+// $brand-primary-darker: 	#B71816;
+// $brand-primary-lighter:	#FF403D;
 
 /*Gradient: top #de3030,  to bottom #cb1717
 
@@ -17,25 +16,163 @@ sub headings (eg: about us): 24px, bold
 
 body: 16px, 28px line-height*/
 
-/* some resets */
+
+/******************************************************************
+		FONT IMPORTS
+*******************************************************************/
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 
-/* global */
+
+
+
+/******************************************************************
+		SASS VARIABLE DECLARATIONS
+*******************************************************************/
+
+$brand-primary:	#990000;
+$brand-primary-complementary-green-light: #00992B;
+$brand-primary-complementary-green-dark: #004C16;
+
+$brand-primary-lighter: #CC0000;
+$brand-primary-lighter-complementary-green-light: #00CC3A;
+$brand-primary-lighter-complementary-green-dark: #007F24;
+
+$off-white: #fcfcfc;
+$text-colour: white;
+$dark-grey: #191919;
+$main-font-set:	Arial, sans-serif;
+
+
+
+
+
+/******************************************************************
+		
+						GLOBAL STYLING
+
+*******************************************************************/
+
+
+/* GLOBAL CONTAINING DIVS */
+
 html {
 	overflow-y: scroll;
+	height: 100%; // footer fix for small screens
 }
 
 body {
 	font-size: 100%;
+	height: 100%; // footer fix for small screens
 }
 
-p, h1, h2, h3, h4, a {
+.main-wrapper {
+	// background: linear-gradient(#de3030, #cb1717);
+	background: 		linear-gradient($brand-primary, $brand-primary-lighter);
+	padding-top: 		1px;		// top gap fix for reviews view
+	min-height: 		100%;		// footer fix for small screens
+	padding-bottom:	1px;	// stops bottom collapse
+	position: 			relative;		// footer fix for small screens
+}
+
+.main-wrapper > .container {
+	max-width: 768px;
+	padding-left: 3.5%;
+	padding-right: 3.5%;
+	padding-bottom: 1em;	// use this to control gap above footer
+	margin: auto;
+	height: 100%;
+}
+
+
+
+
+
+/******************************************************************
+		IMAGES
+*******************************************************************/
+
+img {
+	max-width: 100%;
+}
+
+
+
+
+
+/******************************************************************
+		BUTTONS
+*******************************************************************/
+
+@mixin btn {
+	display: inline-block;
+  color: $text-colour;
+  padding: 0.357142857em 1.071428571em;
+  border: solid $text-colour 0.178571429em;
+  font-size: 0.875em;
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition-property: background, color;
+  transition-duration: 0.1s;
+	  &:hover {
+			transition-duration: 0.15s;
+		  background: $text-colour;
+		  color: $brand-primary-lighter;
+		  text-decoration: none;
+		}
+}
+
+@mixin btn-small {
+	font-size: 0.75em;
+	padding: 0.25em 1.083333333em;
+		&:hover {
+			color: $brand-primary;
+		}
+}
+
+.btn {
+	@include btn;
+}
+
+.btn-small {
+	@include btn;
+	@include btn-small;
+}
+
+
+
+
+
+/******************************************************************
+		FORMS
+*******************************************************************/
+
+textarea {
+	width: 100%;
+	height: 10em;
+}
+
+input[type=submit] {
+	background: none;
+	@include btn;
+}
+
+
+
+
+
+/******************************************************************
+		TEXT
+*******************************************************************/
+
+p, h1, h2, h3, h4, h5, a, th, td {
 	color: $text-colour;
 	font-family: $main-font-set;
 	line-height: 1.8em;
 }
 
-/* paragraph text */
 p {
 	margin-bottom: 1.5em;
 }
@@ -50,13 +187,23 @@ h3 {
 h4 {
 	font-weight: bold;
 	font-size: 1.5em;
-	letter-spacing: 0.6px;
+	letter-spacing:	0.6px;
 	margin: 0;
 }
 
-img {
-	max-width: 100%;
+h5 {
+	font-weight: bold;
+	font-size: 1.2em;
+	margin: 0;
 }
+
+
+
+
+
+/******************************************************************
+		ANCHOR ELEMENTS
+*******************************************************************/
 
 a {
 	color: $text-colour;
@@ -70,127 +217,259 @@ a {
 }
 
 
-/* specifics */
-#header-wrapper {
+
+
+
+/******************************************************************
+		HEADER
+*******************************************************************/
+
+.header-wrapper {
+	position: relative;
 	border-bottom: 1px solid $text-colour;
-	header {
-		max-width: 475px;
-		padding-top: 2.5em;
-		margin-bottom: 6em;
-	}
+		header {
+			max-width: 475px;
+			padding-top: 0;
+			margin-bottom: 6em;
+				#login-div {
+						position: absolute;
+						bottom: 0.2em;
+						right: 0;
+						.icon-logout, .icon-login {
+							&:before {
+								position: relative;
+								top: 0.166666667em;
+								left: 5px;
+								font-size: 1.1em;
+							}
+						}
+				}
+		}
 }
 
-.homepage-wrapper {
-	// background: linear-gradient(#de3030, #cb1717);
-	background: linear-gradient(#990000, #CC0000);
+
+
+
+
+/******************************************************************
+		LOGO
+*******************************************************************/
+
+#logo {
+	width: 100%;	// to maintain svg aspect ratio across browsers	
 }
 
 
-/* Homepage Styling */
-.homepage-wrapper > .container {
-	max-width: 768px;
-	padding-left: 3.5%;
-	padding-right: 3.5%;
-	padding-bottom: 1em;
-	margin: auto;
 
-	.contact-details {					// replaces the bottom icons on bigger screens
-		display:none
+
+
+/**************************************************************************** 						
+							
+							HOMEPAGE STYLING
+
+*****************************************************************************/
+
+.main-wrapper > .container {
+
+	.contact-details {	// replaces the bottom icons on bigger screens
+		display: none
 	}
 
-	/* logo */
-	#logo {
-		width: 100%;					// to maintain svg aspect ratio across browsers	
-	}
 
-	/* headline div */
+
+
+
 	#headline-div {
 		padding: 1.5em 0 3em 0;
 		border-bottom: 1px solid $text-colour;
-		h3 {
-			font-size: 1.3em;
-			font-weight: normal;
-		}
+			h3 {
+				font-size: 1.3em;
+				font-weight: normal;
+			}
 	}
 	
-	/* image row div */
+
+
+
+
 	.image-row {
-		margin-top: 2em;
-		img {
-			margin-top: 1em;
-			border-radius: 5px;
-		}
+		margin-top:	2em;
+			img {
+				margin-top: 1em;
+				border-radius: 5px;
+			}
 
-		img:nth-child(2) {
-			margin-top: 1em;
-		}
+			img:nth-child(2) {
+				margin-top: 1em;
+			}
 	}
 
-	/* main writing */
+
+
+
+
 	.content-row {
-		margin-top: 2em;
-		p {
-			margin-top: 0;
+		margin-top: 1em;
+		margin-bottom: 3em;
+			p {
+				margin-top: 0;
+			}
+	}
+
+
+
+
+
+	#testimonials-wrapper {
+		margin-top: -2em;
+		margin-bottom: 2.5em;
+		// background-color: $brand-primary-complementary-green-dark;
+		// background-color: #151E1E;
+		// background-color: #231B1E;
+		// background-color: #1F1F1F;
+			
+			.icon-quotes-left {
+				margin-right: 2%;
+				position: relative;
+				top: 0.06em;
+				font-size: 1em;
+			}
+			.icon-quotes-right {
+				margin-left: 2%;
+				position: relative;
+				top: 0.05em;
+				font-size: 1em;
+			}
+
+			.testimonial-content {
+				padding: 0.1em 0;
+				border-radius: 8px;
+				p {								// testimonial content
+					margin: 0;
+					margin-top: 0;
+					color: $off-white;
+				}
+			}
+
+			h5 {
+				margin-top: 1em;
+				span:before {		// Student Icon
+					position: relative;
+					top: 0.1875em;
+					margin-right: 2%;
+					font-size: 1.1em;
+				}
+			}
+
+			h5:nth-child(2) {		// first testimonial header
+				margin-top: 0.1em;
+			}
+
+			a {
+				font-size: 0.8em;
+				text-decoration: none;
+					&:before {
+						font-size: 0.8em;
+						margin-right: 3px;
+					}
+			}
+	}
+
+	.testimonial-button-wrapper {
+		text-align: center;
+	}
+
+
+
+
+
+	#contact-div {
+		margin-top: 1.5em;
+		p:nth-child(2) {
+			margin-bottom: 2.5em;
 		}
 	}
+
+
 
 
 
 	/* contact details on bigger screens */
 	.contact-details {
 		margin-bottom: 4em;
-		span {
-			font-size: 2em;
-			position: relative;
-			top: 7px;
-			margin-right: 5px;
+		p {
+			font-weight: bold;
+			letter-spacing: 0.4px;
+			font-size: 1.2em
 		}
-		a:first-child {						// only the icon anchor elements, not the writing
-			text-decoration: none;
-		}
+			span {
+				font-size: 2em;
+				position: relative;
+				top: 10px;
+				margin-right: 5px;
+			}
+			a:first-child {			// only the icon anchor elements, not the writing
+				text-decoration: none;
+			}
 	}
 }
 
-#whatsapp-p-element {
+
+
+
+
+.whatsapp-p-element, .whatsapp-bottom-p-element {
 		text-align: center;
+		font-size: 1.2em;
 		font-weight: bold;
+		letter-spacing: 0.5px;
 }
 
 
 
-/* Icon Row */
+
+
 .icon-row {
 	position: relative;
 	bottom: 25px;
 	text-align: center;
 	font-size: 7.4em;
-	a {
-		text-decoration: none;
-		display: inline-block;
-	}
-
-	a:first-child {						// email icon anchor element
-		margin-left: auto;
-		margin-right: auto;
-	}
-	a:last-child {						// facebook icon anchor element
-		margin-right: auto;
-		margin-left: auto;
-	}
+		a {
+			text-decoration: none;
+			display: inline-block;
+		}
+		a:first-child {						// email icon anchor element
+			margin-left: auto;
+			margin-right: auto;
+		}
+		a:last-child {						// facebook icon anchor element
+			margin-right: auto;
+			margin-left: auto;
+		}
 }
 
 
 
-/* footer */
+
+
+/******************************************************************
+		FOOTER
+*******************************************************************/
+
 .footer {
+	position: absolute;
+	width: 90%;
+	max-width: 768px;
+	bottom: 1em;
+	margin: auto;
 	border-top: 1px solid $text-colour;
-	padding-top: 0.5em;
+	padding-top: 0.5em;					
 	text-align: right;
 	p {
-	padding: 0;
-	margin: 0;
-	font-size: 0.6em;
-	display: inline-block;
+		padding: 0;
+		margin: 0;
+		font-size: 0.6em;
+		display: inline-block;
 		&:first-child {
 			float: left;
 			position: relative;

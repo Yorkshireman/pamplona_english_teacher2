@@ -1,50 +1,52 @@
 <% provide(:title, "Home") %>
 
-<div class="homepage-wrapper">
-	
-	<div class="container">
-  	
-  	<div id="header-wrapper">
-  		<%= render('layouts/header') %>
-  	</div>
-  
-  	<div id="headline-div">
-  		<h3>Aprende inglés con un profesor nativo de inglaterra, titulado de inglés (<span title="¿Que es el CELTA?"><a href="http://www.cambridgeenglish.org/es/exams-and-qualifications/celta/">CELTA</a></span>) y con experiencia. Residente en Pamplona desde septiembre 2014.</h3>
-  	</div>
+<div class="header-wrapper">
+	<%= render('layouts/header') %>
+</div>
 
-  	<div class="image-row">
-  		<%= image_tag "me_teaching.jpg" %><%= image_tag "plaza-castillo-daytime.jpg" %>
-			<%= image_tag "me_with_kids.jpg" %>
-  	</div>
+<div id="headline-div">
+	<h3>Aprende inglés con un profesor nativo de inglaterra, titulado de inglés (<span title="¿Que es el CELTA?"><a href="http://www.cambridgeenglish.org/es/exams-and-qualifications/celta/">CELTA</a></span>) y con experiencia. Residente en Pamplona desde septiembre 2014.</h3>
+</div>
 
-		<div class="content-row">
-			<div id="about-div">
-				<h4>Acerca de</h4>
+<div class="image-row">
+	<%= image_tag "me_teaching.jpg" %><%= image_tag "plaza-castillo-daytime.jpg" %>
+	<%= image_tag "me_with_kids.jpg" %>
+</div>
 
-				<p>Dime qué es lo que quieres mejorar, y prepararé la mejor clase según tus necesidades. Trabajaremos mucho la expresión oral y la corrección de los errores, profundizando en lo que necesites a cada momento.</p>
+<div class="content-row">
+	<div id="about-div">
+		<h4>Acerca de</h4>
 
-				<p>Pienso que es muy importante estar relajado durante las clases, por lo que las realizo de forma amena, al ritmo que necesites.</p>
-				
-				<p>También realizo la preparación específica para <span title="Exámenes de Cambridge"><a href="http://www.cambridgeenglish.org/es/exams-and-qualifications/">exámenes de Cambridge</a></span> o de Escuelas Oficiales. Prácticamente todas mis lecciones las he realizado con adultos.</p>
-			</div>
-			<br>
-	    	<br>
-	    	<div id="contact-div">
-				<h4>Contacto</h4>	
+		<p>Dime qué es lo que quieres mejorar, y prepararé la mejor clase según tus necesidades. Trabajaremos mucho la expresión oral y la corrección de los errores, profundizando en lo que necesites a cada momento.</p>
 
-				<p>No hablo un español muy fluido, por lo que te agradecería que contactases conmigo por escrito, mediante Whatsapp, email o facebook, tanto en inglés como en castellano.</p>
+		<p>Pienso que es muy importante estar relajado durante las clases, por lo que las realizo de forma amena, al ritmo que necesites.</p>
+		
+		<p>También realizo la preparación específica para <span title="Exámenes de Cambridge"><a href="http://www.cambridgeenglish.org/es/exams-and-qualifications/">exámenes de Cambridge</a></span> o de Escuelas Oficiales. Prácticamente todas mis lecciones las he realizado con adultos.</p>
+	</div>
 
-				<p id="whatsapp-p-element">Whatsapp: +447789564331</p>
+    <div id="contact-div">
+		<h4>Contacto</h4>	
 
-				<%= render ('layouts/contact_details') %>
+		<p>Mi castellano no es muy fluido, por lo que te agradecería que contactases conmigo por escrito, mediante Whatsapp, email o facebook, tanto en inglés como en castellano.</p>
 
-			</div>
-		</div>
+		<p class="whatsapp-p-element">Whatsapp: +447789564331</p>
 
 		<%= render ('layouts/icon_row') %>
 
-		<%= render ('layouts/footer') %>
+		<%= render ('layouts/contact_details') %>
 
-  </div>
+	</div>
 
+	<% if @testimonials.count>0 %>
+  		<%= render ('layouts/testimonials') %>
+  	<% end %>
+
+  	<div class="testimonial-button-wrapper"><%= link_to 'Deja tu opinión', new_testimonial_path, class:"btn" %>
+  	</div>
 </div>
+
+<p class="whatsapp-bottom-p-element">Whatsapp: +447789564331</p>
+
+<%= render ('layouts/icon_row') %>
+
+<%= render ('layouts/footer') %>

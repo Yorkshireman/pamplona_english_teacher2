@@ -1,0 +1,11 @@
+<h1>Editar opinion</h1>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @testimonial.user.name %>
+</p>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @testimonial %> |
+<%= link_to 'Atrás', testimonials_path %>
