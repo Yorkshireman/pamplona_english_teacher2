@@ -321,7 +321,7 @@ a {
 
 
 	#testimonials-wrapper {
-		margin-top: -2em;
+		margin-top: -0.75em;
 		margin-bottom: 2.5em;
 		// background-color: $brand-primary-complementary-green-dark;
 		// background-color: #151E1E;
@@ -423,6 +423,13 @@ a {
 		font-size: 1.2em;
 		font-weight: bold;
 		letter-spacing: 0.5px;
+}
+
+.whatsapp-p-element {
+	display: none;
+}
+.icon-row:nth-child(4) {
+	display: none;
 }
 
 
