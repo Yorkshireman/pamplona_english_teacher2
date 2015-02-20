@@ -28,7 +28,7 @@ class TestimonialsController < ApplicationController
 
   def update
     if @testimonial.update(testimonial_params)
-      redirect_to @testimonial, notice: 'Testimonial was successfully updated.'
+      redirect_to root_url, notice: 'Testimonial was successfully updated.'
     else
       render :edit
     end
