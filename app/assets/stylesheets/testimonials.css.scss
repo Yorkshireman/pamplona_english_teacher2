@@ -1,6 +1,6 @@
 $off-white:	#fcfcfc;
 
-#new-testimonial-wrapper {
+#new-testimonial-wrapper, #edit-testimonial-wrapper {
 	margin: auto;
 
 		#login-div {
@@ -28,7 +28,7 @@ $off-white:	#fcfcfc;
 		input[type=submit] {
 			margin-bottom: 	0.6em;
 		}
-		
+
 		.footer {			// Footer fix - bit hacky. Need to refactor html sometime
 			position: static;
 			margin: 3em 0 0 0;

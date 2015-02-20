@@ -1,11 +1,15 @@
-<h1>Editar opinion</h1>
+<% provide(:title, "Editar opinion") %>
 
-<p>
-  <strong>Usuario:</strong>
-  <%= @testimonial.user.name %>
-</p>
+<div id="edit-testimonial-wrapper">
+	<div class="header-wrapper">
+		<%= render('layouts/header') %>
+	</div>
 
-<%= render 'form' %>
+	<h1>Editar opinion</h1>
 
-<%= link_to 'Show', @testimonial %> |
-<%= link_to 'Atrás', testimonials_path %>
+	<%= render 'form' %>
+
+	<%= link_to 'Atrás', root_path, class:"btn-small" %>
+
+	<%= render ('layouts/footer') %>
+</div>
