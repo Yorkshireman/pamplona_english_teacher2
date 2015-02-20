@@ -17,16 +17,8 @@
 
 
 	@media only screen and (min-width: 649px) {
-		#whatsapp-p-element {
-			text-align: left;
-		}
-
-		.icon-row {
+		.icon-row, .whatsapp-bottom-p-element {
 			display: none;
-		}
-
-		.contact-details {
-			display: block;
 		}
 
 		.image-row {
@@ -62,9 +54,34 @@
 				vertical-align: top;
 			}
 
-			#contact-div {
-				margin-left: 2.5%;
+			.contact-details {
+				p {
+					margin-bottom: 1em;
+					// display: inline-block;
+					// &:nth-child(2) {
+					// margin-left: 2%;	
+					// }
+				}
 			}
+
+			#contact-div {
+				margin-top: 0;
+				margin-left: 2.5%;
+				.whatsapp-p-element {
+					display: block;
+					margin-top: 2.5em;
+					margin-bottom: 1em;
+					text-align: left;
+				}
+			}
+		}
+
+		.contact-details {
+			display: block;
+		}
+
+		#testimonials-wrapper {
+			margin-top: 2em;
 		}
 	}
 }

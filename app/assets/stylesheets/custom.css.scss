@@ -310,6 +310,7 @@ a {
 
 	.content-row {
 		margin-top: 1em;
+		margin-bottom: 3em;
 			p {
 				margin-top: 0;
 			}
@@ -320,8 +321,8 @@ a {
 
 
 	#testimonials-wrapper {
-		margin-top: 1em;
-		margin-bottom: 1.5em;
+		margin-top: -2em;
+		margin-bottom: 2.5em;
 		// background-color: $brand-primary-complementary-green-dark;
 		// background-color: #151E1E;
 		// background-color: #231B1E;
@@ -330,24 +331,23 @@ a {
 			.icon-quotes-left {
 				margin-right: 2%;
 				position: relative;
-				top: 0.085em;
-				font-size: 1.5em;
+				top: 0.06em;
+				font-size: 1em;
 			}
 			.icon-quotes-right {
 				margin-left: 2%;
 				position: relative;
-				top: 0.275em;
-				font-size: 1.5em;
+				top: 0.05em;
+				font-size: 1em;
 			}
 
 			.testimonial-content {
-				background-color: $off-white;
-				padding: 0.2em 3%;
+				padding: 0.1em 0;
 				border-radius: 8px;
 				p {								// testimonial content
 					margin: 0;
 					margin-top: 0;
-					color: $dark-grey;
+					color: $off-white;
 				}
 			}
 
@@ -385,6 +385,9 @@ a {
 
 	#contact-div {
 		margin-top: 1.5em;
+		p:nth-child(2) {
+			margin-bottom: 2.5em;
+		}
 	}
 
 
@@ -394,10 +397,15 @@ a {
 	/* contact details on bigger screens */
 	.contact-details {
 		margin-bottom: 4em;
+		p {
+			font-weight: bold;
+			letter-spacing: 0.4px;
+			font-size: 1.2em
+		}
 			span {
 				font-size: 2em;
 				position: relative;
-				top: 7px;
+				top: 10px;
 				margin-right: 5px;
 			}
 			a:first-child {			// only the icon anchor elements, not the writing
@@ -410,9 +418,11 @@ a {
 
 
 
-#whatsapp-p-element {
+.whatsapp-p-element, .whatsapp-bottom-p-element {
 		text-align: center;
+		font-size: 1.2em;
 		font-weight: bold;
+		letter-spacing: 0.5px;
 }
 
 
