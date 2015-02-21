@@ -1,6 +1,7 @@
 <header>
-	<%= image_tag "logo.svg", id:"logo" %>
-
+	<%= link_to root_path do %>
+  <%= image_tag "logo.svg", id:"logo" %>
+  <% end %>
 	<div id="login-div">
       <% if current_user %>
         <!-- <%= link_to "Edit Profile", edit_user_path(current_user.id) %> -->
