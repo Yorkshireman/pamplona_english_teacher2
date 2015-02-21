@@ -386,7 +386,7 @@ a {
 	#contact-div {
 		margin-top: 1.5em;
 		p:nth-child(2) {
-			margin-bottom: 2.5em;
+			margin-bottom: 3.3em;
 		}
 	}
 
@@ -397,19 +397,15 @@ a {
 	/* contact details on bigger screens */
 	.contact-details {
 		margin-bottom: 4em;
-		p {
-			font-weight: bold;
-			font-size: 1.2em
+		span {
+			font-size: 2em;
+			position: relative;
+			top: 10px;
+			margin-right: 5px;
 		}
-			span {
-				font-size: 2em;
-				position: relative;
-				top: 10px;
-				margin-right: 5px;
-			}
-			a:first-child {			// only the icon anchor elements, not the writing
-				text-decoration: none;
-			}
+		a:first-child {			// only the icon anchor elements, not the writing
+			text-decoration: none;
+		}
 	}
 }
 
@@ -419,8 +415,7 @@ a {
 
 .whatsapp-p-element, .whatsapp-bottom-p-element {
 		text-align: center;
-		font-size: 1.2em;
-		font-weight: bold;
+		font-size: 1em;
 }
 
 .whatsapp-p-element {
