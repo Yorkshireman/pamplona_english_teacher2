@@ -3,16 +3,18 @@
 	<h4>Opiniones</h4>
 
   <% @testimonials.each do |testimonial| %>
-    <h5><span class="icon-student"></span><%= testimonial.user.name %></h5>
-    <div class="testimonial-content">
-      <p><span class="icon-quotes-left"></span><%= testimonial.content %><span class="icon-quotes-right"></span></p>
+    <div class="testimonial-wrapper">
+      <h5><span class="icon-student"></span><%= testimonial.user.name %></h5>
+      <div class="testimonial-content">
+        <p><span class="icon-quotes-left"></span><%= testimonial.content %><span class="icon-quotes-right"></span></p>
+      </div>
+      <!--<%= link_to 'Mostrar', testimonial %>-->
+      
+      <% if testimonial.user == current_user %>
+        <%= link_to 'Editar', edit_testimonial_path(testimonial), class:"icon-edit" %>
+        <%= link_to 'Borrar', testimonial, method: :delete, data: { confirm: 'Are you sure?' }, class:"icon-delete" %>
+      <% end %>
     </div>
-    <!--<%= link_to 'Mostrar', testimonial %>-->
-    
-    <% if testimonial.user == current_user %>
-      <%= link_to 'Editar', edit_testimonial_path(testimonial), class:"icon-edit" %>
-      <%= link_to 'Borrar', testimonial, method: :delete, data: { confirm: 'Are you sure?' }, class:"icon-delete" %>
-    <% end %>
 
   <% end %>
 

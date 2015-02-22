@@ -328,6 +328,16 @@ a {
 		// background-color: #151E1E;
 		// background-color: #231B1E;
 		// background-color: #1F1F1F;
+
+			.testimonial-wrapper {
+				border: 2px solid $text-colour;
+				border-radius: 5px;
+				padding: 0 7px 0.5em 7px;
+				margin: 1em 0;
+				&:nth-child(2) {	// first testimonial-wrapper
+					margin-top: 0.5em;
+				}
+			}
 			
 			.icon-quotes-left {
 				margin-right: 2%;
@@ -353,7 +363,7 @@ a {
 			}
 
 			h5 {
-				margin-top: 1em;
+				// margin-top: 1em;
 				span:before {		// Student Icon
 					position: relative;
 					top: 0.1875em;
@@ -362,9 +372,9 @@ a {
 				}
 			}
 
-			h5:nth-child(2) {		// first testimonial header
-				margin-top: 0.1em;
-			}
+			// h5:nth-child(2) {		// first testimonial header
+			// 	margin-top: 0.1em;
+			// }
 
 			a {
 				font-size: 0.8em;
