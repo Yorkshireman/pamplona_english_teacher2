@@ -40,7 +40,7 @@ $brand-primary-lighter-complementary-green-light: #00CC3A;
 $brand-primary-lighter-complementary-green-dark: #007F24;
 
 $off-white: #fcfcfc;
-$text-colour: white;
+$text-colour: #fff0f0;
 $dark-grey: #191919;
 $main-font-set:	Arial, sans-serif;
 
@@ -69,7 +69,8 @@ body {
 
 .main-wrapper {
 	// background: linear-gradient(#de3030, #cb1717);
-	background: 		linear-gradient($brand-primary, $brand-primary-lighter);
+	// background: 		linear-gradient($brand-primary, $brand-primary-lighter);
+	background: 		#D11919;
 	padding-top: 		1px;		// top gap fix for reviews view
 	min-height: 		100%;		// footer fix for small screens
 	padding-bottom:	1px;	// stops bottom collapse
