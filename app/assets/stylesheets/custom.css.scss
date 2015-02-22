@@ -31,7 +31,7 @@ body: 16px, 28px line-height*/
 		SASS VARIABLE DECLARATIONS
 *******************************************************************/
 
-$brand-primary:	#990000;
+$brand-primary:	#D11919;
 $brand-primary-complementary-green-light: #00992B;
 $brand-primary-complementary-green-dark: #004C16;
 
@@ -70,7 +70,7 @@ body {
 .main-wrapper {
 	// background: linear-gradient(#de3030, #cb1717);
 	// background: 		linear-gradient($brand-primary, $brand-primary-lighter);
-	background: 		#D11919;
+	background: 		$brand-primary;
 	padding-top: 		1px;		// top gap fix for reviews view
 	min-height: 		100%;		// footer fix for small screens
 	padding-bottom:	1px;	// stops bottom collapse
@@ -120,7 +120,7 @@ img {
 	  &:hover {
 			transition-duration: 0.15s;
 		  background: $text-colour;
-		  color: $brand-primary-lighter;
+		  color: $brand-primary;
 		  text-decoration: none;
 		}
 }
@@ -358,7 +358,7 @@ a {
 				p {								// testimonial content
 					margin: 0;
 					margin-top: 0;
-					color: $off-white;
+					color: $text-colour;
 				}
 			}
 
