@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
 	validates :email, uniqueness: true
 
 	has_many :testimonials
+	has_many :materials
 end

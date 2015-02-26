@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :materials
+
   resources :testimonials
 
   resources :user_sessions
