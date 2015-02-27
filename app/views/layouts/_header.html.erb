@@ -3,9 +3,10 @@
     <%= image_tag "logo.svg", id:"logo" %>
   <% end %>
 	<div id="login-div">
-      <% if current_user %>
+      <% if logged_in? %>
         <!-- <%= link_to "Edit Profile", edit_user_path(current_user.id) %> -->
         <%= link_to :logout, method: :post, class:"btn-small" do%>Salir<%= content_tag(:span, "", class:"icon-logout") %>
+        <%= link_to "Materiales", materials_path, class: "btn-small" %>
         <%end%>
       <% else %>
         <%= link_to "Registrarte", new_user_path, class:"btn-small" %>

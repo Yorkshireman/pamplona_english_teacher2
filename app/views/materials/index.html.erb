@@ -34,4 +34,10 @@
 
 <br>
 
-<%= link_to 'New Material', new_material_path %>
+<% if current_user == User.first %>
+  <%= link_to 'Add New Material', new_material_path %>
+<% end %>
+
+<br>
+
+<%= link_to "Home", root_path, class:'btn-small' %>
