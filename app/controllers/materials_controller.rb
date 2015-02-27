@@ -60,7 +60,7 @@ class MaterialsController < ApplicationController
 
     def correct_user
       if @material.user !=current_user
-        redirect_to root_path, notice: "You can't mess with other people's materials, naughty!"
+        redirect_to materials_path, notice: "You can't mess with other people's materials, naughty!"
       end
     end
 
