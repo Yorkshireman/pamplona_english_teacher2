@@ -11,9 +11,11 @@
     <div class="materials-wrapper">
       <h5><%= material.title %></h5>
       <% unless material.level == "" %>
-      <p>Level: <%= material.level %></p>
+        <p>Level: <%= material.level %></p>
       <%end%>
-      <p><%= material.description %></p>
+      <% unless material.description == "" %>
+        <p><%= material.description %></p>
+      <%end%>
       <a href="<%= material.link %>" target="_blank", class="btn-small">Download</a>
       
       <% if material.user == current_user %>
