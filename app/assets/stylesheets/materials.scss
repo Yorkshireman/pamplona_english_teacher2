@@ -1,0 +1,78 @@
+$brand-primary:	#E95151;
+// $text-colour: #FEF2F2;
+$text-colour: lighten($brand-primary, 27.5%);
+$headings-colour: #FEF2F2;
+
+#materials-index-wrapper {
+	margin: auto;
+	p, a, h1, h2, h3, h4, h5 {
+		margin: 0;
+		color: $text-colour;
+	}
+
+		#login-div {
+			display: none;
+		}
+		
+		.header-wrapper {
+			border-bottom:	none;
+				header {
+					padding-top: 	0;
+					margin-bottom:	4em;
+				}
+		}
+
+		.btn-small {
+			border-color: $text-colour;
+			&:hover {
+				color: $brand-primary;
+			}
+		}
+
+		h1 {
+			color: $headings-colour;
+			font-size: 		1.8em;
+			margin-bottom: 	0.3em;
+		}
+
+		textarea {
+			margin-bottom:	0.9em;
+		}
+
+		input[type=submit] {
+			margin-bottom: 	0.6em;
+		}
+
+		&>a:last-of-type {
+			margin-top: 0.4em;
+		}
+
+		.materials-wrapper {
+			margin-bottom: 1em;
+			border: 2px solid $text-colour;
+			border-radius: 5px;
+			padding: 0 7px 0.4em 7px;
+			h5 {
+				color: $headings-colour;
+			}
+			p {
+				line-height: 1.5em;
+			}
+			&>p:last-of-type {
+				margin-bottom: 0.2em;
+			}
+			.btn-small:first-of-type {
+				border-color: $headings-colour;
+				color: $headings-colour;
+				&:hover {
+					color: $brand-primary;
+				}
+			}
+		}
+
+		.footer {			// Footer fix - bit hacky. Need to refactor html sometime
+			position: static;
+			margin: 3em 0 0 0;
+			width: 100%;
+		}
+}

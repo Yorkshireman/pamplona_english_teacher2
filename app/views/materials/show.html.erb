@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @material.title %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @material.level %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @material.description %>
+</p>
+
+<% if current_user == @material.user %>
+	<%= link_to 'Edit', edit_material_path(@material), class:'btn-small' %>
+<%end%>
+<%= link_to 'Materiales', materials_path, class:'btn-small' %>

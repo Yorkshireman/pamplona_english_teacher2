@@ -11,7 +11,7 @@ class TestimonialsController < ApplicationController
   end
 
   def new
-    @testimonial = Testimonial.new
+    @testimonial = current_user.testimonials.build
   end
 
   def edit
