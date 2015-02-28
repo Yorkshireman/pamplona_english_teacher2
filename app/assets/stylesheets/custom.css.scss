@@ -31,7 +31,7 @@ body: 16px, 28px line-height*/
 		SASS VARIABLE DECLARATIONS
 *******************************************************************/
 
-$brand-primary:	#E42525;
+$brand-primary:	#E95151;
 
 $off-white: #fcfcfc;
 $text-colour: #FEF2F2;
@@ -205,8 +205,8 @@ a {
 	transition-property: color;
 	transition-duration: 0.2s;
 	&:hover {
-		color: #CCCCCC;
-		transition-duration: 0.5s;
+		color: darken($text-colour, 10%);
+		transition-duration: 0.2s;
 	}
 }
 
