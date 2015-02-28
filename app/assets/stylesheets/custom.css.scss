@@ -31,7 +31,7 @@ body: 16px, 28px line-height*/
 		SASS VARIABLE DECLARATIONS
 *******************************************************************/
 
-$brand-primary:	#E42525;
+$brand-primary:	#E95151;
 
 $off-white: #fcfcfc;
 $text-colour: #FEF2F2;
@@ -235,6 +235,9 @@ a {
 						position: absolute;
 						bottom: 0.2em;
 						right: 0;
+						a:first-child {
+							margin-right: 4px;
+						}
 						.icon-logout, .icon-login {
 							&:before {
 								position: relative;
