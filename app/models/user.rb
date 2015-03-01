@@ -10,4 +10,5 @@ class User < ActiveRecord::Base
 
 	has_many :testimonials
 	has_many :materials
+	belongs_to :group
 end
