@@ -10,5 +10,11 @@ class User < ActiveRecord::Base
 
 	has_many :testimonials
 	has_many :materials
-	belongs_to :group
+
+	groupify :group_member
+  	groupify :named_group_member
+end
+
+class Assignment < ActiveRecord::Base
+  groupify :group_member
 end
