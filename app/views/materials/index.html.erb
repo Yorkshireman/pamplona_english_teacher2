@@ -25,7 +25,7 @@
     </div>
   <%end%>
 
-  <% if current_user == User.first %>
+  <% if userisadmin? %>
     <div><%= link_to 'Add New Material', new_material_path, class:'btn-small' %></div>
   <% end %>
 

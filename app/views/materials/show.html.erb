@@ -15,7 +15,7 @@
   <%= @material.description %>
 </p>
 
-<% if current_user == @material.user %>
+<% if current_user == @material.user || userisadmin? %>
 	<%= link_to 'Edit', edit_material_path(@material), class:'btn-small' %>
 <%end%>
 <%= link_to 'Materiales', materials_path, class:'btn-small' %>

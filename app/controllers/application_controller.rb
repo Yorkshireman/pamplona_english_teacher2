@@ -3,9 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  def first_user?
-  	unless current_user.id == User.first.id
-			redirect_to materials_path, notice: "You have to be an admin to do that."
+
+  def admin?
+  	unless current_user.in_named_group?(:admin)
+			redirect_to root_path, notice: "You have to be an admin to do that."
    	end
   end
 

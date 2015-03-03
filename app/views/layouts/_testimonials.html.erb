@@ -12,6 +12,9 @@
       
       <% if testimonial.user == current_user %>
         <%= link_to 'Editar', edit_testimonial_path(testimonial), class:"icon-edit" %>
+      <% end %>
+
+      <% if testimonial.user == current_user || userisadmin? %>
         <%= link_to 'Borrar', testimonial, method: :delete, data: { confirm: 'Are you sure?' }, class:"icon-delete" %>
       <% end %>
     </div>
