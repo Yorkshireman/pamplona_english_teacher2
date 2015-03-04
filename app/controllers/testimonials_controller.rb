@@ -1,7 +1,6 @@
 class TestimonialsController < ApplicationController
   before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update]
-  before_action :correct_user_or_admin?, only: [:destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :require_login, except: [:index, :show]
 
 
@@ -49,12 +48,6 @@ class TestimonialsController < ApplicationController
 
     def correct_user
       if @testimonial.user != current_user
-        redirect_to root_path, notice: "You can't mess with other people's testimonials, naughty!"
-      end
-    end
-
-    def correct_user_or_admin?
-      unless @testimonial.user = current_user || current_user.in_named_group?(:admin)
         redirect_to root_path, notice: "You can't mess with other people's testimonials, naughty!"
       end
     end
