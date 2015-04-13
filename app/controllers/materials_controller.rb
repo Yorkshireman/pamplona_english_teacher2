@@ -1,7 +1,7 @@
 class MaterialsController < ApplicationController
   before_action :set_material, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
-  before_action :require_login, except: [:index, :show]
+  before_action :require_login
   before_action :first_user?, only: [:new]
 
   def index
