@@ -10,7 +10,7 @@
       </div>
       <!--<%= link_to 'Mostrar', testimonial %>-->
       
-      <% if testimonial.user == current_user %>
+      <% if testimonial.user == current_user || current_user == User.first %>
         <%= link_to 'Editar', edit_testimonial_path(testimonial), class:"icon-edit" %>
         <%= link_to 'Borrar', testimonial, method: :delete, data: { confirm: 'Are you sure?' }, class:"icon-delete" %>
       <% end %>
