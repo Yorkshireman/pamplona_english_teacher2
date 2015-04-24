@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def first_user?
   	unless current_user.id == User.first.id
-			redirect_to materials_path, notice: "You have to be an admin to do that."
+			redirect_to root_path, notice: "You have to be an admin to do that."
    	end
   end
 

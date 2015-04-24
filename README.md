@@ -1,6 +1,6 @@
 Teaching Ad site. This is an ongoing journey. Things of note:
 
-- Logged-in users now have access to a 'materials' page where they can download extra materials. The Admin (me) can post new materials to this page. The downloads are done via Dropbox.
+- Logged-in users now have access to a 'materials' page where they can download extra materials. The Admin (me) can post new materials to this page. The downloads are done via Dropbox share links.
 - Made User.first a pseudo-admin (it's me)
 - My brother designed the logo and the initial look of the page
 - I designed the buttons and the style of the Testimonials (Opiniones) section

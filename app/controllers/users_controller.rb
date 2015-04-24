@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :first_user?, only: [:index]
   
   # skip_before_filter :require_login, only: [:index, :new, :create]
 
